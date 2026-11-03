@@ -11,7 +11,7 @@
 | Roy Granados Aguilar | Desarrollo de la Actividad 1 | 
 | Jorge Zuniga | Desarrollo de la Actividad 2 |
 | Cesar Chavero | Desarrollo de la Actividad |
-| Imanol Ponce de León | Desarrollo de la Actividad |
+| Imanol Ponce de León | Desarrollo de la Actividad 3 |
 | Josept | Desarrollo de la Actividad |
 
 
