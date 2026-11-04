@@ -69,7 +69,7 @@ public class Actividad1 {
 
         System.out.println("Termina la primera desapilacion");
 
-        pila.verCima();
+        System.out.println("La cima de la pila es: " + pila.verCima());
 
         System.out.println("Se ve la cima");
 
