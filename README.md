@@ -151,3 +151,10 @@ La selección adecuada de una estructura de datos —ya sea una **pila** o una *
 Por un lado, las **pilas** son óptimas cuando el flujo operativo requiere deshacer acciones recientes o revertir estados en orden inverso al de su registro (comportamiento LIFO). Por otro lado, las **colas** garantizan un flujo de atención equitativo, ordenado e imparcial, respetando de manera estricta la secuencia cronológica en la que ingresan las solicitudes (comportamiento FIFO). 
 
 En consecuencia, fundamentar correctamente la elección de la estructura de datos no solo previene fallas de procesamiento y reduce la complejidad algorítmica, sino que asegura que la arquitectura del sistema refleje fielmente las reglas de negocio planteadas.
+
+---
+
+### 3. Video
+
+https://youtu.be/fNLk8xx4-o8
+
