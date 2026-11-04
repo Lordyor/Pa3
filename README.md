@@ -17,7 +17,7 @@
 
 
 ### Actividad 1. Pila LIFO
-
+ Ver [resolucion/actividad-1-pila-lifo.md](resolucion/actividad-1-pila-lifo.md)
 
 ### Actividad 2. Cola FIFO
 
