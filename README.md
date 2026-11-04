@@ -17,7 +17,79 @@
 
 
 ### Actividad 1. Pila LIFO
- Ver [resolucion/actividad-1-pila-lifo.md](resolucion/actividad-1-pila-lifo.md)
+### 1. ¿Qué caracteriza a una estructura LIFO?
+
+LIFO (*Last In, First Out*) significa que **el último elemento en entrar es el primero en salir**. Una pila es una estructura lineal de acceso restringido: solo se inserta y se elimina por un extremo, llamado **tope**. Sus operaciones principales son O(1).
+
+### 2. Caso y representación gráfica
+
+La unidad de servicios académicos debe **deshacer acciones en orden inverso al que se registraron** (cambiar una nota, cambiar un horario, corregir un dato de matrícula). Cada acción se apila al registrarla y se desapila al deshacerla.
+
+```
+apilar(A1)       apilar(A2)       apilar(A3)       desapilar() -> A3
+                                  |  A3  | <- tope   |  A2  | <- tope
+                 |  A2  | <- tope |  A2  |           |  A1  |
+|  A1  | <- tope |  A1  |         |  A1  |
++------+         +------+         +------+           +------+
+```
+
+El orden de salida es **A3 → A2 → A1**, inverso al de registro.
+
+### 3. Algoritmos (pseudocódigo)
+
+```
+Estructura Pila
+    datos ← lista vacía
+    tope ← -1                    // -1 indica pila vacía
+Fin Estructura
+
+Función estaVacia(P) : Booleano
+    Retornar (P.tope = -1)
+Fin Función
+
+Procedimiento apilar(P, elemento)
+    P.tope ← P.tope + 1
+    P.datos[P.tope] ← elemento
+Fin Procedimiento
+
+Función desapilar(P) : Elemento
+    Si estaVacia(P) entonces
+        Mostrar "Error: pila vacía"
+        Retornar NULO
+    Fin Si
+    elemento ← P.datos[P.tope]
+    P.tope ← P.tope - 1
+    Retornar elemento
+Fin Función
+
+Función verTope(P) : Elemento
+    Si estaVacia(P) entonces
+        Mostrar "La pila está vacía"
+        Retornar NULO
+    Fin Si
+    Retornar P.datos[P.tope]     // consulta sin eliminar
+Fin Función
+```
+
+**Prueba de escritorio**
+
+| Operación | Contenido (base → tope) | Resultado |
+|---|---|---|
+| inicio | [ ] | estaVacia = Verdadero |
+| apilar("Cambiar nota") | [Cambiar nota] | |
+| apilar("Cambiar horario") | [Cambiar nota, Cambiar horario] | |
+| verTope() | sin cambios | "Cambiar horario" |
+| desapilar() | [Cambiar nota] | "Cambiar horario" |
+| desapilar() | [ ] | "Cambiar nota" |
+| desapilar() | [ ] | Error: pila vacía |
+
+### 4. Aplicación concreta en el caso
+
+**Historial de acciones para deshacer (Undo) en el sistema académico.** Cada modificación de un registro se apila; al pulsar "Deshacer", `desapilar()` revierte **la última acción realizada**, luego la anterior, y así sucesivamente.
+
+La pila es la estructura más adecuada porque deshacer exige revertir en **orden inverso** al registro. Con otro orden, el sistema quedaría inconsistente, ya que una acción reciente puede depender de las anteriores. Con LIFO el acceso es directo al tope, en O(1).
+
+
 
 ### Actividad 2. Cola FIFO
 
