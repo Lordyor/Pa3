@@ -57,4 +57,25 @@ A continuación se analiza y determina la estructura de datos lineal (Pila LIFO 
    * **Mapeo:** Cola de impresión / Procesamiento asíncrono de tareas (*Job Queue*).
    * **Explicación:** Permite administrar la concurrencia de trámites administrativos entrantes cuando la capacidad de atención es limitada, ordenando las solicitudes en una fila temporal donde el orden de salida es idéntico al de entrada.
 
-### Actividad 4. Comparación y argumentación
+## Actividad 4. Comparación y Argumentación
+
+### 1. Comparación Académica entre Pila (LIFO) y Cola (FIFO)
+
+Para evaluar y contrastar ambas estructuras de datos lineales en el contexto del caso planteado, se presentan sus diferencias fundamentales en la siguiente tabla comparativa:
+
+| Eje de Comparación | Estructura Pila (LIFO) | Estructura Cola (FIFO) |
+| :--- | :--- | :--- |
+| **Principio de funcionamiento** | **LIFO** (*Last In, First Out* / Último en entrar, primero en salir). El último elemento ingresado es el primero en ser procesado o retirado. | **FIFO** (*First In, First Out* / Primero en entrar, primero en salir). El primer elemento ingresado es el primero en ser atendido o retirado. |
+| **Operaciones principales** | • `apilar` (*push*): Agrega un elemento en la cima/tope.<br>• `desapilar` (*pop*): Retira el elemento de la cima/tope.<br>• `tope` (*peek/top*): Consulta el elemento superior sin extraerlo.<br>• `esta_vacia`: Verifica si la pila carece de elementos. | • `encolar` (*enqueue*): Agrega un elemento al final de la cola.<br>• `desencolar` (*dequeue*): Retira el elemento ubicado al frente.<br>• `frente` (*front/peek*): Consulta el primer elemento sin extraerlo.<br>• `esta_vacia`: Verifica si la cola carece de elementos. |
+| **Forma de acceso** | **Restringida a un solo extremo** denominado **tope** (*top*). No es posible acceder directamente a los elementos inferiores sin remover previamente los superiores. | **Restringida a ambos extremos**: Las inserciones se realizan exclusivamente por el **final** (*rear*) y las extracciones por el **frente** (*front*). |
+| **Ventajas en contextos de aplicación** | Ideal para mecanismos de reversión o deshacer acciones (*undo*), evaluación de expresiones algebraicas, navegadores (historial de páginas) y gestión de la pila de llamadas (*call stack*). | Garantiza equidad e imparcialidad en la atención de solicitudes por orden de llegada, manejo de impresiones en red, procesamiento de trámites y buffers de datos. |
+
+---
+
+### 2. Conclusión Grupal
+
+La selección adecuada de una estructura de datos —ya sea una **pila** o una **cola**— constituye una decisión técnica fundamental en el diseño de software, pues incide de manera directa en el rendimiento, la mantenibilidad y la coherencia lógica de la solución frente a los requerimientos del sistema.
+
+Por un lado, las **pilas** son óptimas cuando el flujo operativo requiere deshacer acciones recientes o revertir estados en orden inverso al de su registro (comportamiento LIFO). Por otro lado, las **colas** garantizan un flujo de atención equitativo, ordenado e imparcial, respetando de manera estricta la secuencia cronológica en la que ingresan las solicitudes (comportamiento FIFO). 
+
+En consecuencia, fundamentar correctamente la elección de la estructura de datos no solo previene fallas de procesamiento y reduce la complejidad algorítmica, sino que asegura que la arquitectura del sistema refleje fielmente las reglas de negocio planteadas.
